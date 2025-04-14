@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "803651446754",
+    "project_id": "mobilalk-2e6e5",
+    "storage_bucket": "mobilalk-2e6e5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803651446754:android:8798b9467af6e9e0d13bbb",
+        "android_client_info": {
+          "package_name": "com.example.pollfood"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfwUiUgDQ__fTzr0Az-gpDGNjVJZVztQ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

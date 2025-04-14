@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">pollfood</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button_login">Bejelentkezés</string>
+    <string name="button_register">Regisztráció</string>
+    <string name="button_register_google">Bejelentkezés Google-al</string>
+
+    <string name="text_forgotpass">Elfelejtett jelszó</string>
+    <string name="text_login">Jelentkezz be!</string>
+    <string name="switch_showpass">Mutasd</string>
+    <string name="button_back">&lt; Vissza</string>
+
+
+    <string name="hint_email">valaki@example.com</string>
+    <string name="hint_pass">****</string>
+    <string name="label_email">Email</string>
+    <string name="label_pass">Jelszó</string>
+
+    <string name="reg_text">Regisztráció!</string>
+    <string name="continue_button">Tovább</string>
+
+    <string name="reg_username_text">Felhasználónév</string>
+    <string name="reg_firs_name">Keresztnév</string>
+    <string name="reg_second_name">Vezetéknév</string>
+    <string name="reg_emai_text">Email</string>
+    <string name="reg_pass_text">Jelszó</string>
+
+    <string name="logout_button">Kijelentkezés</string>
+
+
+</resources>

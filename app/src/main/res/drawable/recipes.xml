@@ -1,0 +1,26 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Book Outline -->
+    <path
+        android:fillColor="#FF795548"
+        android:pathData="M4,2h14a2,2 0 0,1 2,2v16a2,2 0 0,1 -2,2H4a2,2 0 0,1 -2,-2V4a2,2 0 0,1 2,-2z"/>
+
+    <!-- Page line -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M6,6h10v1H6zM6,9h10v1H6zM6,12h7v1H6z"/>
+
+    <!-- Spoon -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M18.5,7.5c0.83,0 1.5,-0.67 1.5,-1.5s-0.67,-1.5 -1.5,-1.5S17,5.17 17,6s0.67,1.5 1.5,1.5z"/>
+
+    <!-- Fork -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M17,9v6h1v-6h-1zM18,9v6h1v-6h-1z"/>
+</vector>

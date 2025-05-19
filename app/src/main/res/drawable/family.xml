@@ -1,0 +1,21 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    
+    <!-- Parent 1 -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M6,4a2,2 0 1,0 0,4a2,2 0 0,0 0,-4zM5,9h2a1,1 0 0,1 1,1v4h-4v-4a1,1 0 0,1 1,-1z" />
+    
+    <!-- Parent 2 -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M18,4a2,2 0 1,0 0,4a2,2 0 0,0 0,-4zM17,9h2a1,1 0 0,1 1,1v4h-4v-4a1,1 0 0,1 1,-1z" />
+    
+    <!-- Child -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M12,10a1.5,1.5 0 1,0 0,3a1.5,1.5 0 0,0 0,-3zM10.5,14h3a0.5,0.5 0 0,1 0.5,0.5v3.5h-4v-3.5a0.5,0.5 0 0,1 0.5,-0.5z" />
+</vector>

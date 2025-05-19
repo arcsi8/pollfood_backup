@@ -26,6 +26,13 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firestore.v1.WriteResult;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -95,6 +102,22 @@ public class RegisterFragment extends Fragment {
                                     user.updateProfile(profileupdates).addOnCompleteListener(task1 -> {
                                         if (task1.isSuccessful()){
                                             Log.i("profileupdate","display name set");
+                                            FirebaseFirestore db = FirebaseFirestore.getInstance();
+                                            Map<String, Object> document = new HashMap<>();
+                                            document.put("uid", user.getUid());
+                                            document.put("username",user.getDisplayName());
+                                            document.put("email",user.getEmail());
+
+
+                                            db.collection("users").document(user.getUid()).set(document)
+                                                    .addOnSuccessListener(aVoid -> {
+                                                        Log.d("d", "DocumentSnapshot successfully merged/written with ID: " + user.getUid());
+                                                        Toast.makeText(getContext(), "User merged/added with ID: " + user.getUid(), Toast.LENGTH_SHORT).show();
+                                                    })
+                                                    .addOnFailureListener(e -> {
+                                                        Log.w("w", "Error merging document", e);
+                                                        Toast.makeText(getContext(), "Error merging user: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                                                    });
                                         }
                                     });
 
@@ -110,9 +133,6 @@ public class RegisterFragment extends Fragment {
                                             binding.getRoot().setVisibility(View.GONE);
                                             binding.getRoot().setTranslationX(0);
                                             binding.getRoot().setAlpha(1f);
-
-
-
                                         }
                                     });
                                     animset.start();
@@ -136,6 +156,8 @@ public class RegisterFragment extends Fragment {
                                 }
                             }
                         });
+
+
             }
         });
     }

@@ -12,7 +12,12 @@
           "package_name": "com.example.pollfood"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "803651446754-lkefe6s2kl237f79rg23iobbopnpv1lo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBfwUiUgDQ__fTzr0Az-gpDGNjVJZVztQ4"
@@ -20,7 +25,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "803651446754-lkefe6s2kl237f79rg23iobbopnpv1lo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

@@ -50,18 +50,6 @@
                 tools:layout_conversion_absoluteWidth="210dp" />
 
             <EditText
-                android:id="@+id/reg_input_email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:ems="10"
-                android:hint="@string/reg_emai_text"
-                android:inputType="textEmailAddress"
-                android:padding="18dp"
-                tools:layout_conversion_absoluteHeight="45dp"
-                tools:layout_conversion_absoluteWidth="210dp" />
-
-            <EditText
                 android:id="@+id/reg_input_password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -69,6 +57,18 @@
                 android:ems="10"
                 android:hint="@string/reg_pass_text"
                 android:inputType="textPassword"
+                android:padding="18dp"
+                tools:layout_conversion_absoluteHeight="45dp"
+                tools:layout_conversion_absoluteWidth="210dp" />
+
+            <EditText
+                android:id="@+id/reg_input_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="@string/reg_emai_text"
+                android:inputType="textEmailAddress"
                 android:padding="18dp"
                 tools:layout_conversion_absoluteHeight="45dp"
                 tools:layout_conversion_absoluteWidth="210dp" />

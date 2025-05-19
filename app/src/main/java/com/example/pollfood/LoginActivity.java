@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.PersistableBundle;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -19,9 +20,12 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.pollfood.Base.BaseActivity;
+import com.example.pollfood.Classes.Users;
 import com.example.pollfood.databinding.ActivityLoginBinding;
 import com.google.android.material.materialswitch.MaterialSwitch;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class LoginActivity extends BaseActivity {
 
@@ -37,15 +41,18 @@ public class LoginActivity extends BaseActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
+        Log.d("debug_login", "debug1");
         new Handler().postDelayed(() -> {
             FirebaseUser user = mAuth.getCurrentUser();
+            Log.d("debug_login", "debug2");
             if (user != null){
+                Log.d("debug_login", "debug3");
                 Intent succesfulLogin = new Intent(LoginActivity.this, MainActivity.class);
+
                 startActivity(succesfulLogin);
                 finish();
             }
-        },500);
+        },800);
 
     }
 
@@ -119,7 +126,6 @@ public class LoginActivity extends BaseActivity {
 
 
     }
-
 
 }
 

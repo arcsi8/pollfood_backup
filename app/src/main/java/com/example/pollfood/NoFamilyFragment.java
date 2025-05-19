@@ -1,39 +1,37 @@
 package com.example.pollfood;
 
+import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.activity.OnBackPressedDispatcher;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
-import androidx.activity.OnBackPressedCallback;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.pollfood.databinding.FragmentLoginMenuBinding;
+import com.example.pollfood.databinding.FragmentNoFamilyBinding;
+import com.example.pollfood.databinding.FragmentProfileBinding;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link LoginMenuFragment#newInstance} factory method to
+ * Use the {@link NoFamilyFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class LoginMenuFragment extends Fragment {
+public class NoFamilyFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    FragmentLoginMenuBinding binding;
-
+    FragmentNoFamilyBinding binding;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
-    public LoginMenuFragment() {
+    public NoFamilyFragment() {
         // Required empty public constructor
     }
 
@@ -43,11 +41,11 @@ public class LoginMenuFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment LoginMenuFragment.
+     * @return A new instance of fragment NoFamilyFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static LoginMenuFragment newInstance(String param1, String param2) {
-        LoginMenuFragment fragment = new LoginMenuFragment();
+    public static NoFamilyFragment newInstance(String param1, String param2) {
+        NoFamilyFragment fragment = new NoFamilyFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -67,33 +65,21 @@ public class LoginMenuFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        binding.loginButton.setOnClickListener(l ->{
-            Fragment newFrag = new LoginFragment();
-            FragmentTransaction transaction = requireActivity().getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.fragmentContainerView,newFrag);
-            transaction.addToBackStack(null);
-            transaction.commit();
+        binding.buttonConnectFamily.setOnClickListener(l->{
+            Intent intent = new Intent(requireContext(), JoinFamilyActivity.class);
+            startActivity(intent);
         });
-        binding.registerButton.setOnClickListener(l ->{
-            Fragment newFrag = new RegisterFragment();
-            FragmentTransaction transaction = requireActivity().getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.fragmentContainerView,newFrag);
-            transaction.addToBackStack(null);
-            transaction.commit();
+        binding.buttonCreateFamily.setOnClickListener(l->{
+            Intent intent = new Intent(requireContext(), CreateFamilyActivity.class);
+            startActivity(intent);
         });
-
-        binding.textView6.animate().alpha(1f).setDuration(2000).setListener(null);
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        binding = FragmentLoginMenuBinding.inflate(getLayoutInflater());
-
-        binding.textView6.setAlpha(0f);
+        // Inflate the layout for this fragment
+        binding = FragmentNoFamilyBinding.inflate(getLayoutInflater());
 
 
         return binding.getRoot();
